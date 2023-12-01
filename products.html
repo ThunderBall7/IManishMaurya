@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Nobody</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="productdetailes.css">
+
+</head>
+<body>
+    <header class="head">
+       <div class="header_div">
+            <h1 class="h1_header">
+                <img src="images/DiamondLogo1.png" class="header_logo">
+                <img src="/images/website_logo.png" class="header_name">
+            </h1>
+            <nav class="nav_list">
+                <ul class="nav_list_menu">
+                    <li><button class="link_button" onclick="filterProduct('all')">ALL</button></li>
+                    <li><button class="link_button" onclick="filterProduct('Ruby')">RUBY</button></li>
+                    <li><button class="link_button" onclick="filterProduct('Diamond')">DIAMOND</button></li>
+                    <li><button class="link_button" onclick="filterProduct('Sapphire')">SAPPHIRE</button></li>
+                    <!-- <li>RINGS</li>
+                    <li>STONES</li> -->
+                </ul>
+            </nav>
+            <div class="right_side_header">
+
+                <a href="#" class="nation_selector">
+                    <img src="images/location.png" class="location_icon_header">
+                    <span id="current_currency">INR</span>
+                    <span id="current_country">INDIA</span>
+                </a>
+                <input type="text" id="search_header" placeholder="Search">
+                <a href="#" class="indentity_header"><img src="images/search.png" class="search_icon_header" id="search_button"></a>
+                <a href="cart.html" class="cart_header">
+                    <div>
+                        <img src="images/shopping-cart.png" class="cart_icon_header" alt="">
+                        <span class="cart_count">0</span>
+                    </div>
+                </a>
+            </div>
+       </div>
+       <div class="shipping_marquee">
+            <h3>.FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $150USD.</h3>
+            <h3>.FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $150USD.</h3>
+            <h3>.FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $150USD.</h3>
+            <h3>.FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $150USD.</h3>
+       </div>
+
+    </header>
+
+
+
+<!-- -----HEADER^^^^^^^^^^^^^^^^^^^^^^^^^^^^---------------- -->
+
+
+
+<div class="wrapper">
+    <div id="products">
+
+    </div>
+</div>
+
+<!-- <div class="products_preview" id="products_preview">
+
+</div> -->
+
+
+<!-- -FOOTER--------------------------------------------------------- -->
+
+
+<div class="marquee6">
+    <span><h1>AT YOUR SERVICE</h1><img src="images/service-icon.jpg" alt=""></span>
+    <span><h1>AT YOUR SERVICE</h1><img src="images/service-icon.jpg" alt=""></span>
+    <span><h1>AT YOUR SERVICE</h1><img src="images/service-icon.jpg" alt=""></span>
+    <span><h1>AT YOUR SERVICE</h1><img src="images/service-icon.jpg" alt=""></span>
+    <span><h1>AT YOUR SERVICE</h1><img src="images/service-icon.jpg" alt=""></span>
+</div>
+<div class="footer">
+    <div class="left_side_footer">
+        <p>Stay in touch</p>
+        <p>SIGN UP BELOW FOR EXCLUSIVE UPDATES AND OFFERS!</p>
+        <div class="subscribe_newsletter">
+            <input type="text" placeholder="Enter Email">
+            <span class="material-symbols-outlined">
+                arrow_forward_ios
+            </span>
+        </div>
+
+    </div>
+    <div class="right_side_footer">
+        <a href="#">Contact Us</a>
+        <a href="#">Career</a>
+        <a href="#">Home</a>
+        <a href="#">Location</a>
+        <a href="#">Shipping & Returns</a>
+        <a href="#">Terms & Conditions</a>
+    </div>
+</div>
+<div class="main_end">
+    <p>	&#169; 2023 STONE STORE</p>
+</div>
+
+<script>
+    function updateCartCount(){
+  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+
+  let totalCount = 0;
+
+  for (let item in cart) {
+      totalCount += cart[item].quantity;
+  }
+
+  document.querySelector('.cart_count').textContent = totalCount;
+  }
+
+updateCartCount();
+</script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script src="products.js"></script>
+
+</body>
+</html>

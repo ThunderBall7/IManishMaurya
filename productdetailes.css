@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: inter;
+}
+
+.product_detail_container{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    margin: 7px auto;
+}
+/* .product_detail_container.active{
+    display: inline-block;
+    display: none;
+} */
+.single_product_image_container{
+    border-style: solid;
+    width: 50%;
+    align-items: center;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.single_product_desc{
+    border-style: solid;
+    width: 50%;
+    height: 80%;
+    border-color: grey;
+    border-width: 1px;
+}
+.single_product_image{
+    text-align: center;
+    border-radius: 10px;
+    object-fit: cover;
+    padding-top: 25px;
+}
+.single_product_image img{
+    width: 20rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+
+}
+.cart_description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    padding: 10px 5px;
+}
+.button{
+    background-color: rgb(245, 186, 97);
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.button:hover{
+    background-color: rgb(255, 164, 28);
+    cursor: pointer;
+}
+.single_product_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.product_head_desc{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.ratings{
+    color: red;
+    margin-bottom: 10px;
+}
+.price_of_product{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.product_description{
+    display: flex;
+    column-gap: 40px;
+    padding-bottom: 20px;
+}
+.product_description span{
+    color: grey;
+}
+.product_complete_desc{
+    padding-top: 2px;
+    color: rgb(48, 47, 47);
+}
+.header_name a{
+    color: black;
+}
+
+@media (width <= 1200px){
+    .cart_description{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart_description .button{
+        margin-bottom: 5px;
+        width: 10rem;
+        text-align: center;
+
+    }
+}
+
+@media (width <= 690px){
+    .product_detail_container{
+        flex-wrap: wrap;
+    }
+    .single_product_image_container{
+        width: 100%;
+    }
+
+}
